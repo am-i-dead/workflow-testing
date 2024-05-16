@@ -1,9 +1,21 @@
 on:
     workflow_dispatch:
 
+env:
+  ENV: production
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      AIRLINE: life
+      CLOUD: yandex
     steps:
-      - run:
-          echo "Hello World!"
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .
+      
+      - name: echo
+        run: ./script.sh
+
+
