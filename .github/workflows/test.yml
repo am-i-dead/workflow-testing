@@ -1,15 +1,9 @@
 on:
     workflow_dispatch:
 
-env:
-  ENV: production
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      AIRLINE: life
-      CLOUD: yandex
     steps:
       - uses: actions/checkout@v4
         with:
@@ -17,5 +11,3 @@ jobs:
       
       - name: echo
         run: ./script.sh
-
-
