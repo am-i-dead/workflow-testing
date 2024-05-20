@@ -18,6 +18,7 @@ jobs:
           sparse-checkout: .
       
       - name: echo
-        env:
-          HELLO: ${{ inputs.message }}
-        run: ./script.sh
+        run: ls -al
+
+      - name: builder
+        run: ./builder/build.sh 
