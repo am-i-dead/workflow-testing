@@ -20,4 +20,4 @@ jobs:
 
       - name: Put artifact in to the bucket
         run: |
-          s3cmd put test1 CLOUD_URL 
+          s3cmd put test1 $CLOUD_URL 
