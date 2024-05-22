@@ -12,7 +12,7 @@ jobs:
       - name: Install s3cmd
         uses: am-i-dead/s3cmd@v1.6.2
         with:
-          provider: yandexcloud # default is linode
+          provider: scaleway # default is linode
           region: 'ru-central1'
           access_key: ${{ secrets.S3_ACCESS_KEY }}
           secret_key: ${{ secrets.S3_SECRET_KEY }}
