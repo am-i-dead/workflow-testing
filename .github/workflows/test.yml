@@ -13,7 +13,7 @@ jobs:
           SECRET_KEY: ${{ secrets.S3_SECRET_KEY }}
         run: |
           sudo apt-get install s3cmd &&
-          cat <<EOT >>  .s3cfg
+          cat <<EOT >>  /home/runner/.s3cfg
           [default]
           access_key = $ACCESS_KEY
           secret_key = $SECRET_KEY
