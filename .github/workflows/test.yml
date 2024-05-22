@@ -11,7 +11,6 @@ jobs:
         env:
           ACCESS_KEY: ${{ secrets.S3_ACCESS_KEY }}
           SECRET_KEY: ${{ secrets.S3_SECRET_KEY }}
-          CLOUD_URL: ${{ secrets.CLOUD_URL }}
         run: |
           sudo apt-get install s3cmd &&
           cat <<EOT >>  /home/runner/.s3cfg
@@ -25,5 +24,7 @@ jobs:
 
 
       - name: Put artifact in to the bucket
+        env:
+          CLOUD_URL: ${{ secrets.CLOUD_URL }}
         run: |
           s3cmd put test1 $CLOUD_URL 
