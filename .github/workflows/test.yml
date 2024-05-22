@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v4
       
       - name: Install s3cmd
-        uses: am-i-dead/s3cmd@v1.6.2
+        uses: am-i-dead/s3cmd@v1.6.3
         with:
           provider: scaleway # default is linode
           region: 'ru-central1'
