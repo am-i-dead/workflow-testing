@@ -1,0 +1,11 @@
+on:
+    release:
+        types: [published]
+    
+jobs:
+    job:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Test
+          run: |
+            echo test
